@@ -1,6 +1,7 @@
 "use server";
 
-import { revalidatePath } from "next/cache";
+import { validateProduct } from "@/lib/validation/validateProduct";
+import { revalidatePath, revalidateTag } from "next/cache";
 import { redirect } from "next/navigation";
 import slugify from "slugify";
 
@@ -12,12 +13,23 @@ interface ProductFormData {
   slug: string;
 }
 
-export const addProduct = async (formData: FormData) => {
+export const addProduct = async (prevState: FormState, formData: FormData) => {
   const title = formData.get("title") as string;
   const description = formData.get("description") as string;
   const originalPrice = formData.get("originalPrice") as number | null;
   const price = formData.get("price") as number | null;
   const slug = slugify(title, { lower: true });
+
+  const [errors, isValid] = validateProduct(
+    title,
+    description,
+    originalPrice,
+    price
+  );
+
+  if (!isValid) {
+    return { errors };
+  }
 
   const productData: ProductFormData = {
     title,
@@ -36,13 +48,27 @@ export const addProduct = async (formData: FormData) => {
   redirect("/dashboard/products");
 };
 
-export const updateProduct = async (formData: FormData) => {
+export const updateProduct = async (
+  prevState: FormState,
+  formData: FormData
+) => {
   const id = formData.get("id") as number | null;
   const title = formData.get("title") as string;
   const description = formData.get("description") as string;
   const originalPrice = formData.get("originalPrice") as number | null;
   const price = formData.get("price") as number | null;
   const slug = slugify(title, { lower: true });
+
+  const [errors, isValid] = validateProduct(
+    title,
+    description,
+    originalPrice,
+    price
+  );
+
+  if (!isValid) {
+    return { errors };
+  }
 
   const productData: ProductFormData = {
     title,
@@ -58,6 +84,7 @@ export const updateProduct = async (formData: FormData) => {
     headers: { "Content-Type": "application/json" },
   });
   revalidatePath("/dashboard/products");
+  revalidateTag("productDetail");
   redirect("/dashboard/products");
 };
 

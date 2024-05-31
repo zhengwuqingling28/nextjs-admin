@@ -2,15 +2,28 @@
 
 import { addProduct } from "@/action/productAction";
 import InputField from "@/components/ui/input";
+import { useCustomActionState } from "@/lib/custom/customHook";
 import { useState } from "react";
 
 const AddProductForm = () => {
+  const initialState: FormState = { errors: [] };
+  const [formState, formAction] = useCustomActionState<FormState>(
+    addProduct,
+    initialState
+  );
+
   const [formData, setFormData] = useState({
     title: "",
     description: "",
     originalPrice: "",
     price: "",
   });
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    formAction(formData);
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -20,7 +33,7 @@ const AddProductForm = () => {
     }));
   };
   return (
-    <form action={addProduct} className="px-4 w-full">
+    <form onSubmit={handleSubmit} className="px-4 w-full">
       <InputField
         label="Title"
         id="title"
@@ -55,6 +68,15 @@ const AddProductForm = () => {
         onChange={handleChange}
         required
       />
+      {formState.errors.length > 0 && (
+        <ul>
+          {formState.errors.map((error, index) => (
+            <li className="text-red-400" key={index}>
+              {error}
+            </li>
+          ))}
+        </ul>
+      )}
       <button
         type="submit"
         className="float-right mt-4 text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
