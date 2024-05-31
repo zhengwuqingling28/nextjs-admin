@@ -13,9 +13,6 @@ const UserDetail = ({ user }: IProps) => {
           <Image src={"/noavatar.png"} alt="" layout="fill" objectFit="cover" />
         </div>
         <div>{user.username}</div>
-        <div>
-          <span> {new Date(user.createdAt).toISOString()}</span>
-        </div>
       </div>
       <div className="basis-3/4 bg-gray-700 p-4 rounded-lg">
         <UpdateUserForm user={user} />

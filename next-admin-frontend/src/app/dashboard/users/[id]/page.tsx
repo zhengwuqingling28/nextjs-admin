@@ -3,6 +3,7 @@ import UserDetail from "@/components/dashboard/user/user-detail";
 const User = async ({ id }: { id: number }) => {
   const res = await fetch(`http://localhost:8000/users/${id}`, {
     method: "GET",
+    next: { tags: ["userDetail"] },
   });
 
   const data = await res.json();

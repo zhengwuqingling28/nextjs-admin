@@ -1,3 +1,4 @@
+import { deleteUser } from "@/action/userAction";
 import Search from "@/components/ui/search";
 import TagFiled from "@/components/ui/tag";
 import Image from "next/image";
@@ -45,9 +46,7 @@ const UserList = ({ users }: IProps) => {
                 </div>
               </td>
               <td className="px-4 py-2">{user.email}</td>
-              <td className="px-4 py-2">
-                {new Date(user.createdAt).toISOString()}
-              </td>
+              <td className="px-4 py-2">{user.createdAt}</td>
               <td className="px-4 py-2">
                 <TagFiled
                   cssClass={user.isAdmin ? "bg-slate-700" : "bg-violet-700"}
@@ -67,7 +66,7 @@ const UserList = ({ users }: IProps) => {
                       View
                     </button>
                   </Link>
-                  <form>
+                  <form action={deleteUser}>
                     <input type="hidden" name="id" value={user.id} />
                     <button className="m-1 px-5 py-2 bg-red-500 text-white rounded">
                       Delete
