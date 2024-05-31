@@ -1,0 +1,669 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "john_doe",
+      "password": "password1",
+      "email": "john_doe@example.com",
+      "phone": "123-456-789",
+      "address": "123 Main St, City",
+      "createdAt": "2023-01-15T10:00:00Z",
+      "image": "https://example.com/images/john_doe.jpg",
+      "isAdmin": true,
+      "isActive": true
+    },
+    {
+      "id": 2,
+      "username": "jane_smith",
+      "password": "password2",
+      "email": "jane_smith@example.com",
+      "phone": "987-654-321",
+      "address": "456 Elm St, Town",
+      "createdAt": "2023-02-20T15:30:00Z",
+      "image": "https://example.com/images/jane_smith.jpg",
+      "isAdmin": false,
+      "isActive": true
+    },
+    {
+      "id": 3,
+      "username": "alice_johnson",
+      "password": "password3",
+      "email": "alice_johnson@example.com",
+      "phone": "555-123-456",
+      "address": "789 Oak St, Village",
+      "createdAt": "2023-03-10T08:45:00Z",
+      "image": "https://example.com/images/alice_johnson.jpg",
+      "isAdmin": false,
+      "isActive": false
+    },
+    {
+      "id": 4,
+      "username": "bob_brown",
+      "password": "password4",
+      "email": "bob_brown@example.com",
+      "phone": "111-222-333",
+      "address": "222 Maple St, County",
+      "createdAt": "2023-04-05T12:00:00Z",
+      "image": "https://example.com/images/bob_brown.jpg",
+      "isAdmin": true,
+      "isActive": true
+    },
+    {
+      "id": 5,
+      "username": "charlie_white",
+      "password": "password5",
+      "email": "charlie_white@example.com",
+      "phone": "444-555-666",
+      "address": "333 Pine St, District",
+      "createdAt": "2023-05-22T17:15:00Z",
+      "image": "https://example.com/images/charlie_white.jpg",
+      "isAdmin": false,
+      "isActive": true
+    },
+    {
+      "id": 6,
+      "username": "david_green",
+      "password": "password6",
+      "email": "david_green@example.com",
+      "phone": "777-888-999",
+      "address": "444 Cedar St, Province",
+      "createdAt": "2023-06-10T08:30:00Z",
+      "image": "https://example.com/images/david_green.jpg",
+      "isAdmin": false,
+      "isActive": true
+    },
+    {
+      "id": 7,
+      "username": "emma_black",
+      "password": "password7",
+      "email": "emma_black@example.com",
+      "phone": "000-111-222",
+      "address": "555 Oak St, State",
+      "createdAt": "2023-07-15T14:45:00Z",
+      "image": "https://example.com/images/emma_black.jpg",
+      "isAdmin": true,
+      "isActive": false
+    },
+    {
+      "id": 8,
+      "username": "frank_yellow",
+      "password": "password8",
+      "email": "frank_yellow@example.com",
+      "phone": "999-888-777",
+      "address": "666 Elm St, Territory",
+      "createdAt": "2023-08-20T09:00:00Z",
+      "image": "https://example.com/images/frank_yellow.jpg",
+      "isAdmin": false,
+      "isActive": true
+    },
+    {
+      "id": 9,
+      "username": "grace_red",
+      "password": "password9",
+      "email": "grace_red@example.com",
+      "phone": "333-222-111",
+      "address": "777 Maple St, Region",
+      "createdAt": "2023-09-25T11:30:00Z",
+      "image": "https://example.com/images/grace_red.jpg",
+      "isAdmin": false,
+      "isActive": true
+    },
+    {
+      "id": 10,
+      "username": "henry_blue",
+      "password": "password10",
+      "email": "henry_blue@example.com",
+      "phone": "666-777-888",
+      "address": "888 Pine St, Territory",
+      "createdAt": "2023-10-30T16:00:00Z",
+      "image": "https://example.com/images/henry_blue.jpg",
+      "isAdmin": true,
+      "isActive": true
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "Men's Plain T-Shirt",
+      "description": "Men's plain t-shirt made of 100% cotton, breathable and sweat-absorbent.",
+      "originalPrice": 24.99,
+      "price": 19.99,
+      "slug": "mens-plain-t-shirt",
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "title": "Women's Jeans Jacket",
+      "description": "Women's fashion jeans jacket, stylish and casual, suitable for fall and winter.",
+      "originalPrice": 59.99,
+      "price": 49.99,
+      "slug": "womens-jeans-jacket",
+      "categoryId": 2
+    },
+    {
+      "id": 3,
+      "title": "Men's Jeans",
+      "description": "Men's slim fit jeans made of high-quality denim, durable and trendy.",
+      "originalPrice": 39.99,
+      "price": 39.99,
+      "slug": "mens-jeans",
+      "categoryId": 1
+    },
+    {
+      "id": 4,
+      "title": "Women's Evening Dress",
+      "description": "Women's evening dress with elegant design, made of soft satin, perfect for parties.",
+      "originalPrice": 89.99,
+      "price": 79.99,
+      "slug": "womens-evening-dress",
+      "categoryId": 2
+    },
+    {
+      "id": 5,
+      "title": "Men's Office Shirt",
+      "description": "Men's office shirt made of premium material, breathable, suitable for professional work environments.",
+      "originalPrice": 34.99,
+      "price": 29.99,
+      "slug": "mens-office-shirt",
+      "categoryId": 1
+    },
+    {
+      "id": 6,
+      "title": "Women's Casual Blouse",
+      "description": "Women's casual blouse made of lightweight fabric, perfect for everyday wear.",
+      "originalPrice": 25.99,
+      "price": 25.99,
+      "slug": "womens-casual-blouse",
+      "categoryId": 2
+    },
+    {
+      "id": 7,
+      "title": "Men's Running Shoes",
+      "description": "Men's running shoes with breathable mesh upper and cushioned sole.",
+      "originalPrice": 69.99,
+      "price": 59.99,
+      "slug": "mens-running-shoes",
+      "categoryId": 5
+    },
+    {
+      "id": 8,
+      "title": "Women's Summer Dress",
+      "description": "Women's summer dress made of lightweight and breathable fabric, perfect for hot weather.",
+      "originalPrice": 44.99,
+      "price": 34.99,
+      "slug": "womens-summer-dress",
+      "categoryId": 2
+    },
+    {
+      "id": 9,
+      "title": "Men Solid Patched Pocket Shirt",
+      "description": "DAZY Men Solid Patched Pocket Shirt- Men Shirts at SHEIN.",
+      "originalPrice": 49.99,
+      "price": 49.99,
+      "slug": "men-solid-patched-pocket-shirt",
+      "categoryId": 1
+    },
+    {
+      "id": 10,
+      "title": "Kids' Jeans",
+      "description": "Kids' jeans made of high-quality denim, durable and trendy.",
+      "originalPrice": 34.99,
+      "price": 29.99,
+      "slug": "kids-jeans",
+      "categoryId": 3
+    },
+    {
+      "id": 11,
+      "title": "Kids' T-Shirt",
+      "description": "Kids' plain t-shirt made of 100% cotton, breathable and sweat-absorbent.",
+      "originalPrice": 19.99,
+      "price": 14.99,
+      "slug": "kids-t-shirt",
+      "categoryId": 3
+    },
+    {
+      "id": 12,
+      "title": "Kids' Hoodie",
+      "description": "Kids' hoodie with stylish design, suitable for all occasions.",
+      "originalPrice": 39.99,
+      "price": 39.99,
+      "slug": "kids-hoodie",
+      "categoryId": 3
+    },
+    {
+      "id": 13,
+      "title": "Kids' Dress",
+      "description": "Kids' dress with cute and elegant design, perfect for special occasions.",
+      "originalPrice": 59.99,
+      "price": 49.99,
+      "slug": "kids-dress",
+      "categoryId": 3
+    },
+    {
+      "id": 14,
+      "title": "Classic Sunglasses",
+      "description": "Classic sunglasses with UV protection, suitable for all face shapes.",
+      "originalPrice": 19.99,
+      "price": 19.99,
+      "slug": "classic-sunglasses",
+      "categoryId": 4
+    },
+    {
+      "id": 15,
+      "title": "Leather Belt",
+      "description": "Genuine leather belt with stylish buckle, perfect for formal and casual wear.",
+      "originalPrice": 39.99,
+      "price": 29.99,
+      "slug": "leather-belt",
+      "categoryId": 4
+    },
+    {
+      "id": 16,
+      "title": "Beanie Hat",
+      "description": "Beanie hat made of soft and warm material, suitable for cold weather.",
+      "originalPrice": 19.99,
+      "price": 14.99,
+      "slug": "beanie-hat",
+      "categoryId": 4
+    },
+    {
+      "id": 17,
+      "title": "Stylish Watch",
+      "description": "Stylish wristwatch with analog display and stainless steel strap.",
+      "originalPrice": 49.99,
+      "price": 39.99,
+      "slug": "stylish-watch",
+      "categoryId": 4
+    },
+    {
+      "id": 18,
+      "title": "Casual Sneakers",
+      "description": "Casual sneakers with comfortable cushioning and trendy design.",
+      "originalPrice": 49.99,
+      "price": 49.99,
+      "slug": "casual-sneakers",
+      "categoryId": 5
+    },
+    {
+      "id": 19,
+      "title": "Flip Flops",
+      "description": "Classic flip flops with durable rubber sole, perfect for beach and pool.",
+      "originalPrice": 14.99,
+      "price": 9.99,
+      "slug": "flip-flops",
+      "categoryId": 5
+    },
+    {
+      "id": 20,
+      "title": "Formal Shoes",
+      "description": "Elegant formal shoes made of genuine leather, suitable for formal occasions.",
+      "originalPrice": 69.99,
+      "price": 59.99,
+      "slug": "formal-shoes",
+      "categoryId": 5
+    },
+    {
+      "id": 21,
+      "title": "Sports Sandals",
+      "description": "Sports sandals with adjustable straps and shock-absorbing sole, perfect for outdoor activities.",
+      "originalPrice": 39.99,
+      "price": 34.99,
+      "slug": "sports-sandals",
+      "categoryId": 5
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "title": "Men's Clothing",
+      "slug": "mens-clothing",
+      "image": "/category/mens-clothing.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Women's Clothing",
+      "slug": "womens-clothing",
+      "image": "/category/womens-clothing.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Kids' Clothing",
+      "slug": "kids-clothing",
+      "image": "/category/kids-clothing.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Accessories",
+      "slug": "accessories",
+      "image": "/category/accessories.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Footwear",
+      "slug": "footwear",
+      "image": "/category/footwear.jpg"
+    }
+  ],
+  "slides": [
+    {
+      "id": 1,
+      "title": "Summer Sale Collections",
+      "description": "Sale! Up to 50% off!",
+      "img": "/slider/summer-slider.jpg",
+      "url": "/",
+      "bg": "bg-gradient-to-r from-yellow-50 to-pink-50"
+    },
+    {
+      "id": 2,
+      "title": "Winter Sale Collections",
+      "description": "Sale! Up to 50% off!",
+      "img": "/slider/spring-slider.jpg",
+      "url": "/",
+      "bg": "bg-gradient-to-r from-pink-50 to-blue-50"
+    },
+    {
+      "id": 3,
+      "title": "Spring Sale Collections",
+      "description": "Sale! Up to 50% off!",
+      "img": "/slider/winter-slider.jpg",
+      "url": "/",
+      "bg": "bg-gradient-to-r from-blue-50 to-yellow-50"
+    }
+  ],
+  "images": [
+    {
+      "id": 1,
+      "image": "/product/mens-plain-t-shirt.jpg",
+      "productId": 1,
+      "isMain": true,
+      "isSub": false
+    },
+    {
+      "id": 2,
+      "image": "/product/mens-plain-t-shirt-2.jpg",
+      "productId": 1,
+      "isMain": false,
+      "isSub": true
+    },
+    {
+      "id": 3,
+      "image": "/product/womens-jeans-jacket.jpg",
+      "productId": 2,
+      "isMain": true,
+      "isSub": false
+    },
+    {
+      "id": 4,
+      "image": "/product/womens-jeans-jacket-2.jpg",
+      "productId": 2,
+      "isMain": false,
+      "isSub": true
+    },
+    {
+      "id": 5,
+      "image": "/product/mens-jeans.jpg",
+      "productId": 3,
+      "isMain": true,
+      "isSub": false
+    },
+    {
+      "id": 6,
+      "image": "/product/mens-jeans-2.jpg",
+      "productId": 3,
+      "isMain": false,
+      "isSub": true
+    },
+    {
+      "id": 7,
+      "image": "/product/womens-evening-dress.jpg",
+      "productId": 4,
+      "isMain": true,
+      "isSub": false
+    },
+    {
+      "id": 8,
+      "image": "/product/womens-evening-dress-2.jpg",
+      "productId": 4,
+      "isMain": false,
+      "isSub": true
+    },
+    {
+      "id": 9,
+      "image": "/product/mens-office-shirt.jpg",
+      "productId": 5,
+      "isMain": true,
+      "isSub": false
+    },
+    {
+      "id": 10,
+      "image": "/product/mens-office-shirt-2.jpg",
+      "productId": 5,
+      "isMain": false,
+      "isSub": true
+    },
+    {
+      "id": 11,
+      "image": "/product/womens-casual-blouse.jpg",
+      "productId": 6,
+      "isMain": true,
+      "isSub": false
+    },
+    {
+      "id": 12,
+      "image": "/product/womens-casual-blouse-2.jpg",
+      "productId": 6,
+      "isMain": false,
+      "isSub": true
+    },
+    {
+      "id": 13,
+      "image": "/product/mens-running-shoes.jpg",
+      "productId": 7,
+      "isMain": true,
+      "isSub": false
+    },
+    {
+      "id": 14,
+      "image": "/product/mens-running-shoes-2.jpg",
+      "productId": 7,
+      "isMain": false,
+      "isSub": true
+    },
+    {
+      "id": 15,
+      "image": "/product/womens-summer-dress.jpg",
+      "productId": 8,
+      "isMain": true,
+      "isSub": false
+    },
+    {
+      "id": 16,
+      "image": "/product/womens-summer-dress-2.jpg",
+      "productId": 8,
+      "isMain": false,
+      "isSub": true
+    },
+    {
+      "id": 17,
+      "image": "/product/men-solid-patched-pocket-shirt.jpg",
+      "productId": 9,
+      "isMain": true,
+      "isSub": false
+    },
+    {
+      "id": 18,
+      "image": "/product/men-solid-patched-pocket-shirt-2.jpg",
+      "productId": 9,
+      "isMain": false,
+      "isSub": true
+    },
+    {
+      "id": 19,
+      "image": "/product/kids-jeans.jpg",
+      "productId": 10,
+      "isMain": true,
+      "isSub": false
+    },
+    {
+      "id": 20,
+      "image": "/product/kids-jeans-2.jpg",
+      "productId": 10,
+      "isMain": false,
+      "isSub": true
+    },
+    {
+      "id": 21,
+      "image": "/product/kids-t-shirt.jpg",
+      "productId": 11,
+      "isMain": true,
+      "isSub": false
+    },
+    {
+      "id": 22,
+      "image": "/product/kids-t-shirt-2.jpg",
+      "productId": 11,
+      "isMain": false,
+      "isSub": true
+    },
+    {
+      "id": 23,
+      "image": "/product/kids-hoodie.jpg",
+      "productId": 12,
+      "isMain": true,
+      "isSub": false
+    },
+    {
+      "id": 24,
+      "image": "/product/kids-hoodie-2.jpg",
+      "productId": 12,
+      "isMain": false,
+      "isSub": true
+    },
+    {
+      "id": 25,
+      "image": "/product/kids-dress.jpg",
+      "productId": 13,
+      "isMain": true,
+      "isSub": false
+    },
+    {
+      "id": 26,
+      "image": "/product/kids-dress-2.jpg",
+      "productId": 13,
+      "isMain": false,
+      "isSub": true
+    },
+    {
+      "id": 27,
+      "image": "/product/classic-sunglasses.jpg",
+      "productId": 14,
+      "isMain": true,
+      "isSub": false
+    },
+    {
+      "id": 28,
+      "image": "/product/classic-sunglasses-2.jpg",
+      "productId": 14,
+      "isMain": false,
+      "isSub": true
+    },
+    {
+      "id": 29,
+      "image": "/product/leather-belt.jpg",
+      "productId": 15,
+      "isMain": true,
+      "isSub": false
+    },
+    {
+      "id": 30,
+      "image": "/product/leather-belt-2.jpg",
+      "productId": 15,
+      "isMain": false,
+      "isSub": true
+    },
+    {
+      "id": 31,
+      "image": "/product/beanie-hat.jpg",
+      "productId": 16,
+      "isMain": true,
+      "isSub": false
+    },
+    {
+      "id": 32,
+      "image": "/product/beanie-hat-2.jpg",
+      "productId": 16,
+      "isMain": false,
+      "isSub": true
+    },
+    {
+      "id": 33,
+      "image": "/product/stylish-watch.jpg",
+      "productId": 17,
+      "isMain": true,
+      "isSub": false
+    },
+    {
+      "id": 34,
+      "image": "/product/stylish-watch-2.jpg",
+      "productId": 17,
+      "isMain": false,
+      "isSub": true
+    },
+    {
+      "id": 35,
+      "image": "/product/casual-sneakers.jpg",
+      "productId": 18,
+      "isMain": true,
+      "isSub": false
+    },
+    {
+      "id": 36,
+      "image": "/product/casual-sneakers-2.jpg",
+      "productId": 18,
+      "isMain": false,
+      "isSub": true
+    },
+    {
+      "id": 37,
+      "image": "/product/flip-flops.jpg",
+      "productId": 19,
+      "isMain": true,
+      "isSub": false
+    },
+    {
+      "id": 38,
+      "image": "/product/flip-flops-2.jpg",
+      "productId": 19,
+      "isMain": false,
+      "isSub": true
+    },
+    {
+      "id": 39,
+      "image": "/product/formal-shoes.jpg",
+      "productId": 20,
+      "isMain": true,
+      "isSub": false
+    },
+    {
+      "id": 40,
+      "image": "/product/formal-shoes-2.jpg",
+      "productId": 20,
+      "isMain": false,
+      "isSub": true
+    },
+    {
+      "id": 41,
+      "image": "/product/sports-sandals.jpg",
+      "productId": 21,
+      "isMain": true,
+      "isSub": false
+    },
+    {
+      "id": 42,
+      "image": "/product/sports-sandals-2.jpg",
+      "productId": 21,
+      "isMain": false,
+      "isSub": true
+    }
+  ]
+}
